@@ -14,7 +14,7 @@ export default function HeroSection() {
               height={50}
               alt="Picture of the author"
             />
-              <h2 className="text-2xl font-bold text-primary">SUI Data Analytics</h2>
+              <h2 className="text-2xl text-primary text-yellow-50 font-extrabold tracking-tight">Majesticer - SUI Data Analytics</h2>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
               Unlock the Power of <span className="text-blue-500">SUI Blockchain</span> Data

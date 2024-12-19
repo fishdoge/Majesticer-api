@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { BarChart3, LineChart, Activity, TrendingUp } from 'lucide-react'
 import Image from "next/image"
 
 export default function DataPrice() {
