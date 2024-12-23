@@ -1,11 +1,11 @@
-export function bytesToUint64(bytes) {
+export function bytesToUint64(bytes:any) {
     // 创建一个 ArrayBuffer，大小为 8 字节（64 位）
     let buffer = new ArrayBuffer(8);
     // 创建一个 DataView，允许我们以不同的字节序访问 ArrayBuffer
     let view = new DataView(buffer);
 
     // 将字节数组写入 DataView
-    bytes.forEach((byte, index) => {
+    bytes.forEach((byte:any, index:any) => {
         view.setUint8(index, byte);
     });
 
