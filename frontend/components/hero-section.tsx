@@ -1,7 +1,15 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
 export default function HeroSection() {
+
+  const openGitBook =()=>{
+
+    window.open("https://yu-gou-gong-zuo-shisorganization.gitbook.io/majesticer", "majesticer");
+
+  }
   return (
     <section className="py-20 px-4 md:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
@@ -26,7 +34,7 @@ export default function HeroSection() {
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                 Start Exploring
               </Button>
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" onClick={openGitBook}>
                 View Documentation
               </Button>
             </div>

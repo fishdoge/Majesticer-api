@@ -28,7 +28,7 @@ export default function DataMetrics() {
           />
           <MetricCard
             icon={<BarChart3 className="w-8 h-8 text-green-500" />}
-            title="Daily Active Users"
+            title="Api Request"
             value={callRequest.toString()}
             change="+8.2%"
           />
