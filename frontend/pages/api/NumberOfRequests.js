@@ -27,9 +27,7 @@ export async function callRequest(){
       'value':callValue
     }
     await setDoc(docRef, data);
-    console.log(callValue);
 
-    return callValue
 } 
 
 export async function pureCallRequest(){

@@ -8,7 +8,7 @@ export default function DataMetrics() {
   const [callRequest,setCallRequest] = useState(0);
   
   useEffect(()=>{
-  
+    
     const setCallData = async()=>{
       setCallRequest(await pureCallRequest());
     }
