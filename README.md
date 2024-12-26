@@ -5,5 +5,5 @@ Majesticer is a data provider on the Sui blockchain, offering various transactio
 
 ## API
 
-/api/suiprice
-/api/suiprice_number
+- /api/suiprice
+- /api/suiprice_number
