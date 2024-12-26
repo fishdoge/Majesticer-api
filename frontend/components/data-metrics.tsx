@@ -1,8 +1,22 @@
+"use client"
 import { Card, CardContent } from "@/components/ui/card"
 import { BarChart3, LineChart, Activity, TrendingUp } from 'lucide-react'
-
+import { useEffect,useState } from "react"
+import { pureCallRequest } from '../pages/api/NumberOfRequests'
 
 export default function DataMetrics() {
+  const [callRequest,setCallRequest] = useState(0);
+
+
+  useEffect(()=>{
+  
+    const setCallData = async()=>{
+      setCallRequest(await pureCallRequest())
+    }
+
+    setCallData();
+    
+  })
   return (
     <section className="py-16 px-4 md:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
@@ -16,7 +30,7 @@ export default function DataMetrics() {
           <MetricCard
             icon={<BarChart3 className="w-8 h-8 text-green-500" />}
             title="Daily Active Users"
-            value="156K"
+            value={callRequest.toString()}
             change="+8.2%"
           />
           <MetricCard

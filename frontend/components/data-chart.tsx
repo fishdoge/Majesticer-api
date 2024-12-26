@@ -5,16 +5,20 @@ import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
 
 const data = [
-  { date: "2024-06", transactions: 90000, users: 12000 },
-  { date: "2024-07", transactions: 170000, users: 12500 },
-  { date: "2024-08", transactions: 120000, users: 13000 },
-  { date: "2024-09", transactions: 180000, users: 13800 },
-  { date: "2024-10", transactions: 170000, users: 14500 },
-  { date: "2024-11", transactions: 220000, users: 15200 },
-  { date: "2024-12", transactions: 290000, users: 17600 },
+  { date: "2024-06", transactions: 90000, users: 120 },
+  { date: "2024-07", transactions: 170000, users: 125 },
+  { date: "2024-08", transactions: 120000, users: 130 },
+  { date: "2024-09", transactions: 180000, users: 138 },
+  { date: "2024-10", transactions: 170000, users: 145 },
+  { date: "2024-11", transactions: 220000, users: 152 },
+  { date: "2024-12", transactions: 290000, users: 176 },
 ]
 
 export default function DataChart() {
+
+  
+
+
   return (
     <section className="py-16 px-4 md:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
@@ -26,7 +30,7 @@ export default function DataChart() {
             <ChartContainer
               config={{
                 transactions: {
-                  label: "Transactions",
+                  label: "api request : ",
                   color: "hsl(var(--chart-1))",
                 },
                 users: {
