@@ -7,7 +7,7 @@ export default function HeroSection() {
 
   const openGitBook =()=>{
 
-    window.open("https://yu-gou-gong-zuo-shisorganization.gitbook.io/majesticer", "majesticer");
+    window.open("https://gitbook.majesticer.xyz/", "majesticer");
 
   }
   return (
