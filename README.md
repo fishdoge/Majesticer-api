@@ -10,3 +10,5 @@ Get sui price with api
 - /api/deep_price
 
 ### API request counter
+
+### vercel Analytics
