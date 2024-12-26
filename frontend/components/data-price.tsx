@@ -1,7 +1,31 @@
+"use client"
+
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
+import { useEffect,useState } from "react"
+
+//import { preSwapDeep, suiPriceInNumber} from '../components/price/deepbook'
 
 export default function DataPrice() {
+
+  const [suiPrice,setSuiPrice] = useState(0);
+  const [deepPrice,setDeepPrice] = useState(0);
+
+  useEffect(()=>{
+    console.log("host",`${window.location.href}api/sui_price_number`)
+    const setCallData = async()=>{
+      const suiresponse = await fetch(`${window.location.href}/api/sui_price_number`);
+      const sui = await suiresponse.json();
+      setSuiPrice(sui);
+      //setDeepPrice(await preSwapDeep);
+      const deepresponse = await fetch(`${window.location.href}/api/deep_price`);
+      const deep = await deepresponse.json();
+      setDeepPrice(deep);
+    }
+
+    setCallData();
+    
+  })
   return (
     <section className="py-16 px-4 md:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
@@ -9,7 +33,7 @@ export default function DataPrice() {
           <MetricCard
             icon="/sui2.png"
             title="SUI"
-            value="4.3 USD"
+            value={suiPrice+" USD"}
             change="+12.5%"
             states={40}
           />
@@ -17,7 +41,7 @@ export default function DataPrice() {
           <MetricCard
             icon="/deep.png"
             title="DEEP"
-            value="0.12 USD"
+            value={deepPrice + " USD"}
             change="+10.3%"
             states={30}
           />
