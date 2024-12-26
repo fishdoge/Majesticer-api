@@ -9,3 +9,4 @@ Get sui price with api
 - /api/sui_price_number
 - /api/deep_price
 
+### API request counter
