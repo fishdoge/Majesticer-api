@@ -1,4 +1,4 @@
-import { suiPrice } from '../deepbook.ts'
+import { suiPrice } from '../../components/price/deepbook.ts'
 
 export default async function handler(req, res) {
 
