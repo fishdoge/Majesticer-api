@@ -41,7 +41,18 @@ export default function HeroSection() {
           </div>
           <div className="relative h-[400px] lg:h-[600px]">
             <div className="absolute inset-0 bg-blue-500/10 rounded-3xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-3xl" />
+              <div className="absolute inset-0 bg-gradient-to-r from-white to-blue-500 backdrop-blur-2xl" >
+
+                <div className="absolute flex justify-center place-items-center h-full w-full">
+                  <Image
+                    src="/data.png"
+                    width={400}
+                    height={420}
+                    alt="Picture of the author"
+                  />
+                </div>
+              
+              </div>
             </div>
           </div>
         </div>
