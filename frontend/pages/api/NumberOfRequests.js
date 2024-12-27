@@ -1,15 +1,18 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, doc, getDoc, setDoc   } from 'firebase/firestore';
+import { getFirestore, collection, doc, getDoc, setDoc  } from 'firebase/firestore';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDk2znYtmg1sujNhgCoZLpCNe4W1_nBr24",
-  authDomain: "majesticer-api-data.firebaseapp.com",
-  projectId: "majesticer-api-data",
-  storageBucket: "majesticer-api-data.firebasestorage.app",
-  messagingSenderId: "421041101621",
-  appId: "1:421041101621:web:bc280eba8a5d8934538a7c",
-  measurementId: "G-VE7H22NK0B"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
@@ -31,6 +34,7 @@ export async function callRequest(){
 } 
 
 export async function pureCallRequest(){
+
   const docRef = doc(collection(db, 'apiCall'), 'number');
   
   const docSnap = await getDoc(docRef);
