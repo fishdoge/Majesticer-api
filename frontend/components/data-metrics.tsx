@@ -1,12 +1,12 @@
 "use client"
 import { Card, CardContent } from "@/components/ui/card"
 import { BarChart3, LineChart, Activity, TrendingUp } from 'lucide-react'
-import { useEffect,useState } from "react"
+//import { useEffect,useState } from "react"
 //import { pureCallRequest } from '../pages/api/numberOfRequests.js'
 
 export default function DataMetrics() {
-  const [callRequest,setCallRequest] = useState(0);
-
+  //const [callRequest,setCallRequest] = useState(0);
+  const callRequest = 55;
   // useEffect(()=>{
 
   //   const setCallData = async()=>{
