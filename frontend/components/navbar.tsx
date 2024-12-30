@@ -1,47 +1,49 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, X, Wallet } from 'lucide-react'
+import { Menu, X} from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image"
+import { ConnectButton,useCurrentAccount,useCurrentWallet   } from '@mysten/dapp-kit';
+import SignAndLogin from './signMessage'
+
 
 export default function Navbar() {
-  const [isWalletConnected, setIsWalletConnected] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const handleConnectWallet = async () => {
-    // 模擬連接錢包
-    setIsWalletConnected(true)
-  }
+    const currentAccount = useCurrentAccount();
+    const { connectionStatus } = useCurrentWallet();
 
-  const handleDisconnectWallet = () => {
-    setIsWalletConnected(false)
-  }
+    const currectAddress =()=>{
+        console.log(currentAccount.address)
+    }
+
+    useEffect(()=>{
+
+    },[])
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900 border-b border-gray-800  backdrop-blur-sm">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 ">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
               src="/suimm.png"
               alt="SUI Data Analytics"
-              width={32}
-              height={32}
+              width={40}
+              height={40}
               className="rounded-lg"
             />
-            <span className="text-white font-bold">SUI Data</span>
+            <span className="text-white font-bold text-xl">Majesticer</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -49,7 +51,7 @@ export default function Navbar() {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-black hover:text-white">
+                  <NavigationMenuTrigger className="text-white hover:text-white bg-blue-400 h-12">
                     Products
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -76,29 +78,15 @@ export default function Navbar() {
               </NavigationMenuList>
             </NavigationMenu>
 
-            {/* Wallet Connection */}
-            {!isWalletConnected ? (
-              <Button
-                onClick={handleConnectWallet}
-                className="bg-blue-600 hover:bg-blue-700"
-              >
-                <Wallet className="mr-2 h-4 w-4" />
-                Connect Wallet
-              </Button>
-            ) : (
-              <Button
-                onClick={handleDisconnectWallet}
-                variant="outline"
-                className="border-gray-700 text-gray-300 hover:text-white"
-              >
-                <Wallet className="mr-2 h-4 w-4" />
-                0x1234...5678
-              </Button>
-            )}
+            <Button>
+                <ConnectButton  className='h-12 bg-slate-500 ' />
+            </Button>
+            <SignAndLogin/>
+
           </div>
 
           {/* Mobile Menu Button */}
-          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+          <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" className="lg:hidden" size="icon">
                 <Menu className="h-6 w-6 text-gray-300" />
@@ -111,7 +99,7 @@ export default function Navbar() {
                   <div className="flex items-center justify-between">
                     <Link href="/" className="flex items-center space-x-2">
                       <Image
-                        src="/placeholder.svg?height=32&width=32"
+                        src="/suimm.png"
                         alt="SUI Data Analytics"
                         width={32}
                         height={32}
@@ -149,24 +137,9 @@ export default function Navbar() {
                   </div>
                 </div>
                 <div className="p-4 border-t border-gray-800">
-                  {!isWalletConnected ? (
-                    <Button
-                      onClick={handleConnectWallet}
-                      className="w-full bg-blue-600 hover:bg-blue-700"
-                    >
-                      <Wallet className="mr-2 h-4 w-4" />
-                      Connect Wallet
+                    <Button>
+                        <ConnectButton className="h-10 bg-blue"/>
                     </Button>
-                  ) : (
-                    <Button
-                      onClick={handleDisconnectWallet}
-                      variant="outline"
-                      className="w-full border-gray-700 text-gray-300 hover:text-white"
-                    >
-                      <Wallet className="mr-2 h-4 w-4" />
-                      0x1234...5678
-                    </Button>
-                  )}
                 </div>
               </div>
             </SheetContent>
