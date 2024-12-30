@@ -2,19 +2,19 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { BarChart3, LineChart, Activity, TrendingUp } from 'lucide-react'
 import { useEffect,useState } from "react"
-import { pureCallRequest } from '../pages/api/NumberOfRequests'
+import { pureCallRequest } from '../pages/api/numberOfRequests'
 
 export default function DataMetrics() {
   const [callRequest,setCallRequest] = useState(0);
-  
+
   useEffect(()=>{
-    
+
     const setCallData = async()=>{
       setCallRequest(await pureCallRequest());
     }
 
     setCallData();
-    
+
   })
   return (
     <section className="py-16 px-4 md:px-6 lg:px-8">

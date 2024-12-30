@@ -1,4 +1,4 @@
-import { callRequest } from './NumberOfRequests.js'
+import { callRequest } from './numberOfRequests.js'
 
 export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000/');
