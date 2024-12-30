@@ -2,20 +2,20 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { BarChart3, LineChart, Activity, TrendingUp } from 'lucide-react'
 import { useEffect,useState } from "react"
-import { pureCallRequest } from '../pages/api/numberOfRequests.js'
+//import { pureCallRequest } from '../pages/api/numberOfRequests.js'
 
 export default function DataMetrics() {
   const [callRequest,setCallRequest] = useState(0);
 
-  useEffect(()=>{
+  // useEffect(()=>{
 
-    const setCallData = async()=>{
-      setCallRequest(await pureCallRequest());
-    }
+  //   const setCallData = async()=>{
+  //     setCallRequest(await pureCallRequest());
+  //   }
 
-    setCallData();
+  //   setCallData();
 
-  })
+  // })
   return (
     <section className="py-16 px-4 md:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
