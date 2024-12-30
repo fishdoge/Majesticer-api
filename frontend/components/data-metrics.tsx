@@ -6,7 +6,7 @@ import { BarChart3, LineChart, Activity, TrendingUp } from 'lucide-react'
 
 export default function DataMetrics() {
   //const [callRequest,setCallRequest] = useState(0);
-  const callRequest = 55;
+  const callRequest = 2355;
   // useEffect(()=>{
 
   //   const setCallData = async()=>{
@@ -24,25 +24,23 @@ export default function DataMetrics() {
             icon={<Activity className="w-8 h-8 text-blue-500" />}
             title="Total Transactions"
             value="2.4M+"
-            change="+12.5%"
           />
           <MetricCard
             icon={<BarChart3 className="w-8 h-8 text-green-500" />}
             title="Api Request"
             value={callRequest.toString()}
-            change="+8.2%"
+
           />
           <MetricCard
             icon={<LineChart className="w-8 h-8 text-purple-500" />}
             title="Smart Contracts"
             value="45.2K"
-            change="+15.7%"
+
           />
           <MetricCard
             icon={<TrendingUp className="w-8 h-8 text-orange-500" />}
-            title="Market Volume"
+            title="Expect Market Volume"
             value="$892M"
-            change="+10.3%"
           />
         </div>
       </div>
@@ -50,21 +48,20 @@ export default function DataMetrics() {
   )
 }
 
-function MetricCard({ icon, title, value, change }: {
+function MetricCard({ icon, title, value }: {
   icon: React.ReactNode
   title: string
   value: string
-  change: string
 }) {
   return (
     <Card className="bg-gray-800/50 border-gray-700">
       <CardContent className="p-6">
         <div className="flex items-center justify-between">
           {icon}
-          <span className="text-green-500 text-sm font-medium">{change}</span>
+
         </div>
-        <h3 className="mt-4 text-2xl font-bold text-white">{value}</h3>
-        <p className="text-gray-400">{title}</p>
+        <h3 className="mt-4 text-3xl font-bold text-white">{value}</h3>
+        <p className="text-gray-400 ">{title}</p>
       </CardContent>
     </Card>
   )
