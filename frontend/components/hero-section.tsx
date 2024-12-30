@@ -11,7 +11,7 @@ export default function HeroSection() {
 
   }
   return (
-    <section className="py-20 px-4 md:px-6 lg:px-8">
+    <section className="py-20 px-4 md:px-6 lg:px-8 mt-10">
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -45,13 +45,13 @@ export default function HeroSection() {
 
                 <div className="absolute flex justify-center place-items-center h-full w-full">
                   <Image
-                    src="/data.png"
+                    src="/suimm.png"
                     width={400}
                     height={420}
                     alt="Picture of the author"
                   />
                 </div>
-              
+
               </div>
             </div>
           </div>

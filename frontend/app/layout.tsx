@@ -29,8 +29,8 @@ export default function RootLayout({
   return (
     <html lang="en">
        <Head>
-                <link rel="icon" href="/data.png" />
-                <title>Majesticer</title>
+          <link rel="icon" href="/suimm.png" />
+          <title>Majesticer</title>
         </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

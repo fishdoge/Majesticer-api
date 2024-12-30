@@ -16,7 +16,7 @@ async function fetchUsers() {
             }
         })
     }
- 
+
 }
 
 fetchUsers()
