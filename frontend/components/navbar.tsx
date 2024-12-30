@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import {
   NavigationMenu,
@@ -13,18 +13,20 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, X} from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image"
-import { ConnectButton,useCurrentAccount,useCurrentWallet   } from '@mysten/dapp-kit';
+// import { ConnectButton,useCurrentAccount,useCurrentWallet   } from '@mysten/dapp-kit';
+import { ConnectButton} from '@mysten/dapp-kit';
+
 import SignAndLogin from './signMessage'
 
 
 export default function Navbar() {
 
-    const currentAccount = useCurrentAccount();
-    const { connectionStatus } = useCurrentWallet();
+    // const currentAccount = useCurrentAccount();
+    // const { connectionStatus } = useCurrentWallet();
 
-    const currectAddress =()=>{
-        console.log(currentAccount.address)
-    }
+    // const currectAddress =()=>{
+    //     console.log(currentAccount.address)
+    // }
 
     useEffect(()=>{
 
