@@ -39,7 +39,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/suimm.png"
+              src="/suimmv2.png"
               alt="SUI Data Analytics"
               width={40}
               height={40}
@@ -101,7 +101,7 @@ export default function Navbar() {
                   <div className="flex items-center justify-between">
                     <Link href="/" className="flex items-center space-x-2">
                       <Image
-                        src="/suimm.png"
+                        src="/suimmv2.png"
                         alt="SUI Data Analytics"
                         width={32}
                         height={32}

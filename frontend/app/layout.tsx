@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
        <Head>
-          <link rel="icon" href="/suimm.png" />
+          <link rel="icon" href="/suimmv2.png" />
           <title>Majesticer</title>
         </Head>
       <body
