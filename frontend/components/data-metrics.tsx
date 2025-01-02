@@ -1,21 +1,22 @@
 "use client"
 import { Card, CardContent } from "@/components/ui/card"
 import { BarChart3, LineChart, Activity, TrendingUp } from 'lucide-react'
-//import { useEffect,useState } from "react"
-//import { pureCallRequest } from '../pages/api/numberOfRequests.js'
+import { useEffect,useState } from "react"
 
 export default function DataMetrics() {
-  //const [callRequest,setCallRequest] = useState(0);
-  const callRequest = 2355;
-  // useEffect(()=>{
+  const [callRequest,setCallRequest] = useState(0);
 
-  //   const setCallData = async()=>{
-  //     setCallRequest(await pureCallRequest());
-  //   }
+  useEffect(()=>{
 
-  //   setCallData();
+    async function req(){
+      const callRequest = await fetch(`${window.location.href}/api/api_request`);
 
-  // })
+      console.log(callRequest)
+      setCallRequest(await callRequest.json())
+    }
+
+    req()
+  })
   return (
     <section className="py-16 px-4 md:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">

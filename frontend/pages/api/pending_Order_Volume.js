@@ -1,8 +1,9 @@
 import { queryOrder } from '../../components/price/deepbook.ts'
+import { callRequest } from '@/pages/firebaseConfig'
 
 export default async function handler(req, res) {
     // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000/');
-
+    await callRequest()
     try {
         // 檢查請求方法是否為 GET 或 POST
         if (req.method !== 'GET' && req.method !== 'POST') {

@@ -18,11 +18,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 //const analytics = getAnalytics(app);
-const db = getFirestore(app);
+export const db = getFirestore(app);
 
 export async function callRequest(){
     const docRef = doc(collection(db, 'apiCall'), 'number');
-    
+
     const docSnap = await getDoc(docRef);
     const callValue = docSnap.data().value + 1;
 
@@ -31,15 +31,15 @@ export async function callRequest(){
     }
     await setDoc(docRef, data);
 
-} 
+}
 
 export async function pureCallRequest(){
 
   const docRef = doc(collection(db, 'apiCall'), 'number');
-  
+
   const docSnap = await getDoc(docRef);
   const callValue = docSnap.data().value;
   console.log(callValue);
 
   return callValue
-} 
+}
