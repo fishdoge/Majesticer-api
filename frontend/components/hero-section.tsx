@@ -46,8 +46,8 @@ export default function HeroSection() {
                 <div className="absolute flex justify-center place-items-center h-full w-full">
                   <Image
                     src="/data.png"
-                    width={400}
-                    height={420}
+                    width={460}
+                    height={400}
                     alt="Picture of the author"
                   />
                 </div>
