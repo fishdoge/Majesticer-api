@@ -1,5 +1,5 @@
 import { suiPrice } from '../../components/price/deepbook.ts'
-import { callRequest } from '@/pages/firebaseConfig'
+import { callRequest } from '@/lib/firebaseConfig.js'
 
 export default async function handler(req, res) {
     await callRequest()

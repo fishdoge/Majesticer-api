@@ -1,6 +1,6 @@
-import { db } from '@/pages/firebaseConfig'
-import {  collection, query, getDocs  } from 'firebase/firestore';
-import { callRequest } from '@/pages/firebaseConfig'
+import { db } from '@/lib/firebaseConfig'
+import { collection, query, getDocs } from 'firebase/firestore';
+import { callRequest } from '@/lib/firebaseConfig.js'
 
 export async function callSuiHistoricalData(){
 

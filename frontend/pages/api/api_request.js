@@ -1,4 +1,4 @@
-import { pureCallRequest } from '@/pages/firebaseConfig.js'
+import { pureCallRequest } from '@/lib/firebaseConfig.js'
 
 export default async function handler(req, res) {
 
