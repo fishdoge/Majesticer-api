@@ -1,7 +1,7 @@
 import { Transaction } from "@mysten/sui/transactions";
 import { getFullnodeUrl, SuiClient } from "@mysten/sui/client";
 import { bcs } from "@mysten/sui/bcs";
-
+import { queryOrder } from './pendingOrderVolume'
 const POOL =
   "0xe05dafb5133bcffb8d59f4e12465dc0e9faeaa05e3e342a08fe135800e3e4407"; // sui_usdc
 const MOCK_SENDER =
@@ -87,7 +87,7 @@ export async function preSwapDeep():Promise<number> {
     if (deepPrize === undefined) {
       return 0; // 確保返回值為數字
     }
-  
+
     return deepPrize; // deepPrize 一定是 number
   } catch (e) {
     console.log(e);
@@ -119,3 +119,5 @@ function decimals(baseOut:number,quoteOut:number,deepRequired:number,dec:number)
   return value;
 }
 
+
+export { queryOrder }

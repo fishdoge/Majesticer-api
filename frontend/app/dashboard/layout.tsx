@@ -1,11 +1,5 @@
 "use client"
 
-import DataMetrics from "@/components/data-metrics"
-import DataChart from "@/components/data-chart"
-import HeroSection from "@/components/hero-section"
-import Features from "@/components/features"
-import DataPrice from "@/components/data-price"
-import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
 import { createNetworkConfig, SuiClientProvider } from '@mysten/dapp-kit';
 import { getFullnodeUrl } from '@mysten/sui/client';
@@ -28,30 +22,25 @@ const { networkConfig } = createNetworkConfig({
 const queryClient = new QueryClient();
 
 
-export default function HomePage() {
+
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <QueryClientProvider client={queryClient}>
       <SuiClientProvider networks={networkConfig} defaultNetwork="mainnet">
         <WalletProvider>
-          <InputPage/>
+          <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
+            <Navbar />
+            <div className="pt-16">
+              {children}
+            </div>
+          </div>
         </WalletProvider>
       </SuiClientProvider>
     </QueryClientProvider>
-  )
-}
-
-function InputPage(){
-
-  return(
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 ">
-      <Navbar/>
-      <HeroSection />
-      <DataMetrics />
-      <DataPrice/>
-      <Features />
-      <DataChart />
-      <Footer/>
-    </div>
   )
 }
 

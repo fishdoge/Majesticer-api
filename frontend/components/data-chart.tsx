@@ -16,13 +16,13 @@ const data = [
 
 export default function DataChart() {
 
-  
+
 
 
   return (
-    <section className="py-16 px-4 md:px-6 lg:px-8">
-      <div className="container mx-auto max-w-7xl">
-        <Card className="bg-gray-800/50 border-gray-700">
+    <section className="py-16 px-4 md:px-6 lg:px-8 hidden lg:block ">
+      <div className="container mx-auto max-w-7xl ">
+        <Card className="bg-gray-800/50 border-gray-700 ">
           <CardHeader>
             <CardTitle className="text-white">Network Growth</CardTitle>
           </CardHeader>
@@ -38,7 +38,7 @@ export default function DataChart() {
                   color: "hsl(var(--chart-2))",
                 },
               }}
-              className="h-[600px]"
+              className="h-[500px] w-[1200px]"
             >
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={data}>

@@ -24,7 +24,7 @@ export default function DataPrice() {
     }
 
     setCallData();
-    
+
   })
   return (
     <section className="py-16 px-4 md:px-6 lg:px-8">
@@ -51,7 +51,7 @@ export default function DataPrice() {
   )
 }
 
-function MetricCard({ icon, title, value, change,states}: {
+function MetricCard({ icon, title, value, change, states}: {
   icon: string
   title: string
   value: string

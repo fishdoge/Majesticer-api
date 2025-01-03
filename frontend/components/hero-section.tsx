@@ -11,7 +11,7 @@ export default function HeroSection() {
 
   }
   return (
-    <section className="py-20 px-4 md:px-6 lg:px-8">
+    <section className="py-20 px-4 md:px-6 lg:px-8 mt-10">
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -41,17 +41,17 @@ export default function HeroSection() {
           </div>
           <div className="relative h-[400px] lg:h-[600px]">
             <div className="absolute inset-0 bg-blue-500/10 rounded-3xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-white to-blue-500 backdrop-blur-2xl" >
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-900 backdrop-blur-2xl" >
 
                 <div className="absolute flex justify-center place-items-center h-full w-full">
                   <Image
-                    src="/data.png"
-                    width={460}
-                    height={400}
+                    src="/suimmv2.png"
+                    width={640}
+                    height={500}
                     alt="Picture of the author"
                   />
                 </div>
-              
+
               </div>
             </div>
           </div>
