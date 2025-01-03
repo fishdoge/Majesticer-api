@@ -58,7 +58,7 @@ export default function Navbar() {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid gap-3 p-6 w-[400px]">
-                      <Link href="#" className="group grid gap-1">
+                      <Link href="/dashboard" className="group grid gap-1">
                         <div className="text-sm font-medium text-black group-hover:text-blue-400">
                           Analytics Dashboard
                         </div>

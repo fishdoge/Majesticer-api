@@ -111,7 +111,7 @@ export default function DashboardPage() {
                       color: "hsl(var(--chart-1))",
                     },
                   }}
-                  className="h-[300px]"
+                  className="h-full"
                 >
                   <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={usageData}>
