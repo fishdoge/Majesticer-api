@@ -2,19 +2,26 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { BarChart3, LineChart, Activity, TrendingUp } from 'lucide-react'
 import { useEffect,useState } from "react"
+import { fetchTvl } from '@/components/price/suiTvl'
 
 export default function DataMetrics() {
   const [callRequest,setCallRequest] = useState(0);
+  const [suiTvl,setSuiTvl] = useState('0');
 
   useEffect(()=>{
 
     async function req(){
+
+      console.log('run defillma')
       const callRequest = await fetch(`${window.location.href}/api/api_request`);
 
-      console.log(callRequest)
-      setCallRequest(await callRequest.json())
-    }
+      const suiTvl = await fetchTvl()
 
+      setCallRequest(await callRequest.json())
+      const suiTvlString = String(Math.round((suiTvl??0)/1000000)) + ' M '
+      setSuiTvl(suiTvlString)
+
+    }
     req()
   })
   return (
@@ -23,7 +30,7 @@ export default function DataMetrics() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <MetricCard
             icon={<Activity className="w-8 h-8 text-blue-500" />}
-            title="Total Transactions"
+            title="Daily Transactions on SUI"
             value="2.4M+"
           />
           <MetricCard
@@ -34,14 +41,14 @@ export default function DataMetrics() {
           />
           <MetricCard
             icon={<LineChart className="w-8 h-8 text-purple-500" />}
-            title="Smart Contracts"
-            value="45.2K"
+            title="Smart Contracts - cetus deepbook bluemove"
+            value="17"
 
           />
           <MetricCard
             icon={<TrendingUp className="w-8 h-8 text-orange-500" />}
-            title="Expect Market Volume"
-            value="$892M"
+            title="Sui TVL - from DefiLlama"
+            value={suiTvl.toString()}
           />
         </div>
       </div>
