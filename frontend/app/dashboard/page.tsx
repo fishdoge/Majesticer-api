@@ -51,50 +51,50 @@ export default function DashboardPage() {
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             <Card className="bg-gray-800/50 border-gray-700">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium text-gray-300">
+                <CardTitle className="text-lg font-medium text-gray-100">
                   Total API Calls
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-white">24,685</div>
+                <div className="text-2xl font-bold text-white mt-4">24,685</div>
                 <p className="text-xs text-gray-400">+20.1% from last month</p>
               </CardContent>
             </Card>
             <Card className="bg-gray-800/50 border-gray-700">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium text-gray-300">
+                <CardTitle className="text-lg font-medium text-gray-100">
                   Current Plan
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-white">Pro</div>
+                <div className="text-2xl font-bold text-white mt-4">Pro</div>
                 <p className="text-xs text-gray-400">Up to 100k calls/month</p>
               </CardContent>
             </Card>
             <Card className="bg-gray-800/50 border-gray-700">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium text-gray-300">
+                <CardTitle className="text-lg font-medium text-gray-100">
                   Plan Usage
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-white">24.7%</div>
+                <div className="text-2xl font-bold text-white mt-4">24.7%</div>
                 <p className="text-xs text-gray-400">24,685 of 100,000 calls</p>
               </CardContent>
             </Card>
             <Card className="bg-gray-800/50 border-gray-700">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium text-gray-300">
+                <CardTitle className="text-lg font-medium text-gray-100">
                   Account Status
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold text-white">
-                  <Badge className="bg-green-500/20 text-green-500 hover:bg-green-500/20">
+                  <Badge className="bg-green-500/20 w-[80px] h-[30px]  text-green-500 hover:bg-green-500/20 mt-2">
                     Active
                   </Badge>
                 </div>
-                <p className="text-xs text-gray-400">All systems operational</p>
+                <p className="text-xs text-gray-400 mt-2">All systems operational</p>
               </CardContent>
             </Card>
           </div>

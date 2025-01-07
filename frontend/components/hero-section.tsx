@@ -6,9 +6,10 @@ import Image from "next/image"
 export default function HeroSection() {
 
   const openGitBook =()=>{
-
     window.open("https://gitbook.majesticer.xyz/", "majesticer");
-
+  }
+  const openAboutUs =()=>{
+    window.open("https://majesticer.xyz/SUI-Data-Analytics.pdf", "majesticer");
   }
   return (
     <section className="py-20 px-4 md:px-6 lg:px-8 mt-10">
@@ -31,7 +32,7 @@ export default function HeroSection() {
               Professional-grade data analytics and insights for the SUI blockchain ecosystem. Real-time metrics, comprehensive analysis, and actionable intelligence.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700" onClick={openAboutUs}>
                 Start Exploring
               </Button>
               <Button size="lg" variant="outline" onClick={openGitBook}>
