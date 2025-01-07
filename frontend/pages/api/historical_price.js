@@ -1,6 +1,6 @@
 import { db } from '@/lib/firebaseConfig'
 import { collection, query, getDocs } from 'firebase/firestore';
-import { callRequest } from '@/lib/firebaseConfig.js'
+//import { callRequest } from '@/lib/firebaseConfig.js'
 
 export async function callSuiHistoricalData(){
 
@@ -20,7 +20,7 @@ export async function callSuiHistoricalData(){
 
 export default async function handler(req, res) {
 
-  await callRequest()
+  //await callRequest()
   // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000/');
   const suiPriceInString = await callSuiHistoricalData()
   res.send(suiPriceInString);
