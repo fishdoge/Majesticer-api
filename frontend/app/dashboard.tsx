@@ -26,7 +26,7 @@ const usageData = [
   { date: "2024-09", apiCalls: 7500 },
   { date: "2024-10", apiCalls: 8200 },
   { date: "2024-11", apiCalls: 11800 },
-  
+
 ]
 
 export default function DashboardPage() {
@@ -45,7 +45,7 @@ export default function DashboardPage() {
 
   },[account])
 
-  
+
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(apiKey);
@@ -218,13 +218,25 @@ export default function DashboardPage() {
                     >
                       <Copy className="h-4 w-4 mr-2" />
                       {isCopied? 'Copyed':'Copy'}
-                      
+
                     </Button>
+
                   </div>
                   <div className="flex items-center space-x-2 rounded-md border border-gray-700 bg-gray-900/50 px-4 py-2">
                     <Key className="h-4 w-4 text-gray-400" />
                     <span className="text-sm text-gray-400 font-mono">
                       {apiKey}
+                    </span>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <p className="text-sm font-medium text-gray-300">Timing</p>
+                  </div>
+                  <div className="flex items-center space-x-2 rounded-md border border-gray-700 bg-gray-900/50 px-4 py-2">
+
+                    <span className="text-sm text-gray-400 font-mono">
+                      2025-3-2
                     </span>
                   </div>
                 </div>
