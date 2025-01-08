@@ -38,7 +38,7 @@ export default function DataChart() {
                   color: "hsl(var(--chart-2))",
                 },
               }}
-              className="h-[500px] w-[1200px]"
+              className="h-[500px] w-full"
             >
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={data}>
