@@ -7,7 +7,7 @@ import { fetchTvl } from '@/components/price/suiTvl'
 export default function DataMetrics() {
   const [callRequest,setCallRequest] = useState(0);
   const [suiTvl,setSuiTvl] = useState('0');
-  const [dailyTransaciotns,setDailyTransaciotns] = useState(0)
+  //const [dailyTransaciotns,setDailyTransaciotns] = useState(0)
 
   useEffect(()=>{
 
@@ -22,8 +22,8 @@ export default function DataMetrics() {
       const suiTvlString = String(Math.round((suiTvl??0)/1000000)) + ' M '
       setSuiTvl(suiTvlString)
 
-      const dailyTrans = await fetch(`${window.location.href}/api/suiDailyTransaction`);
-      setDailyTransaciotns(await dailyTrans.json())
+      // const dailyTrans = await fetch(`${window.location.href}/api/suiDailyTransaction`);
+      // setDailyTransaciotns(await dailyTrans.json())
 
     }
     req()
@@ -35,7 +35,7 @@ export default function DataMetrics() {
           <MetricCard
             icon={<Activity className="w-8 h-8 text-blue-500" />}
             title="Daily Transactions on SUI"
-            value={dailyTransaciotns.toString()}
+            value={'15 M+'}
           />
           <MetricCard
             icon={<BarChart3 className="w-8 h-8 text-green-500" />}
