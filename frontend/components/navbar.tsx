@@ -37,6 +37,8 @@ export default function Navbar() {
       if(connectionStatus=='connected'){
         console.log('user',user)
       }
+
+      console.log('isLoggedIn',isLoggedIn)
     
     },[connectionStatus])
 

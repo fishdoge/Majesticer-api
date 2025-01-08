@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Head from 'next/head';
 
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
@@ -28,10 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       <Head>
-          <link rel="icon" href="/suimmv2.png" />
+     
+          {/* <link rel="icon" href="/suimmv2.png" /> */}
           <title>Majesticer</title>
-        </Head>
+       
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
