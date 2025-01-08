@@ -7,10 +7,14 @@ import Features from "@/components/features"
 import DataPrice from "@/components/data-price"
 import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
+import DashboardPage from "@/app/dashboard"
 import { createNetworkConfig, SuiClientProvider } from '@mysten/dapp-kit';
 import { getFullnodeUrl } from '@mysten/sui/client';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import '@mysten/dapp-kit/dist/index.css';
+import { AuthProvider,WebsitePageContext } from '@/components/context/authContext'
+import { useContext } from 'react'
+
 
 
 import dynamic from 'next/dynamic';
@@ -33,7 +37,9 @@ export default function HomePage() {
     <QueryClientProvider client={queryClient}>
       <SuiClientProvider networks={networkConfig} defaultNetwork="mainnet">
         <WalletProvider>
-          <InputPage/>
+          <AuthProvider>
+            <InputPage/>
+          </AuthProvider>
         </WalletProvider>
       </SuiClientProvider>
     </QueryClientProvider>
@@ -42,15 +48,28 @@ export default function HomePage() {
 
 function InputPage(){
 
+  const { pageState } = useContext(WebsitePageContext);
+
   return(
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 ">
       <Navbar/>
-      <HeroSection />
-      <DataMetrics />
-      <DataPrice/>
-      <Features />
-      <DataChart />
-      <Footer/>
+
+      { pageState === 'home' && (
+      <>
+        <HeroSection />
+        <DataMetrics />
+        <DataPrice/>
+        <Features />
+        <DataChart />
+        <Footer/>
+      </>
+      )}
+      { pageState === 'dashboard' && (
+      <>
+       <DashboardPage/>
+      </>
+      )}
+     
     </div>
   )
 }

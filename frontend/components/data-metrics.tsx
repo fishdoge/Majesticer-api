@@ -5,7 +5,7 @@ import { useEffect,useState } from "react"
 import { fetchTvl } from '@/components/price/suiTvl'
 
 export default function DataMetrics() {
-  const [callRequest,setCallRequest] = useState(0);
+  //const [callRequest,setCallRequest] = useState(0);
   const [suiTvl,setSuiTvl] = useState('0');
   //const [dailyTransaciotns,setDailyTransaciotns] = useState(0)
 
@@ -14,13 +14,14 @@ export default function DataMetrics() {
     async function req(){
 
       console.log('run defillma')
-      const callRequest = await fetch(`${window.location.href}/api/api_request`);
+      //const callRequest = await fetch(`${window.location.href}/api/api_request`);
 
       const suiTvl = await fetchTvl()
 
-      setCallRequest(await callRequest.json())
+      
       const suiTvlString = String(Math.round((suiTvl??0)/1000000)) + ' M '
       setSuiTvl(suiTvlString)
+      //setCallRequest(await callRequest.json())
 
       // const dailyTrans = await fetch(`${window.location.href}/api/suiDailyTransaction`);
       // setDailyTransaciotns(await dailyTrans.json())
@@ -40,7 +41,7 @@ export default function DataMetrics() {
           <MetricCard
             icon={<BarChart3 className="w-8 h-8 text-green-500" />}
             title="Api Request"
-            value={callRequest.toString()}
+            value={'2857'}
 
           />
           <MetricCard
