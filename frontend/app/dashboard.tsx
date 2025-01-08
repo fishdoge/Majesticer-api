@@ -15,13 +15,18 @@ import { useCurrentAccount} from '@mysten/dapp-kit';
 import Navbar from "@/components/navbar"
 
 const usageData = [
-  { date: "2024-01-01", apiCalls: 2500 },
-  { date: "2024-01-02", apiCalls: 3200 },
-  { date: "2024-01-03", apiCalls: 4100 },
-  { date: "2024-01-04", apiCalls: 3800 },
-  { date: "2024-01-05", apiCalls: 4500 },
-  { date: "2024-01-06", apiCalls: 5200 },
-  { date: "2024-01-07", apiCalls: 4800 },
+  { date: "2024-01", apiCalls: 2500 },
+  { date: "2024-02", apiCalls: 3200 },
+  { date: "2024-03", apiCalls: 4100 },
+  { date: "2024-04", apiCalls: 3800 },
+  { date: "2024-05", apiCalls: 4500 },
+  { date: "2024-06", apiCalls: 5200 },
+  { date: "2024-07", apiCalls: 4800 },
+  { date: "2024-08", apiCalls: 6800 },
+  { date: "2024-09", apiCalls: 7500 },
+  { date: "2024-10", apiCalls: 8200 },
+  { date: "2024-11", apiCalls: 11800 },
+  
 ]
 
 export default function DashboardPage() {
