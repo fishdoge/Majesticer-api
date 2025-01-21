@@ -1,0 +1,417 @@
+[
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T01:00:00+08:00",
+    "value": 4.766197218206463
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T02:00:00+08:00",
+    "value": 4.673364931809758
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T03:00:00+08:00",
+    "value": 4.716805424811509
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T04:00:00+08:00",
+    "value": 4.723015004114587
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T05:00:00+08:00",
+    "value": 4.7334308783499965
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T06:00:00+08:00",
+    "value": 4.800402736467829
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T07:00:00+08:00",
+    "value": 4.8697641790738375
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T08:00:00+08:00",
+    "value": 4.84598461553411
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T09:00:00+08:00",
+    "value": 4.71987436183385
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T10:00:00+08:00",
+    "value": 4.737247670425154
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T11:00:00+08:00",
+    "value": 4.722055931049247
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T12:00:00+08:00",
+    "value": 4.680775816554351
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T13:00:00+08:00",
+    "value": 4.6799642958973795
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T14:00:00+08:00",
+    "value": 4.658135008638719
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T15:00:00+08:00",
+    "value": 4.676541143143921
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T16:00:00+08:00",
+    "value": 4.662765550071546
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T17:00:00+08:00",
+    "value": 4.603254150951906
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T18:00:00+08:00",
+    "value": 4.612826167778929
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T19:00:00+08:00",
+    "value": 4.613118546001712
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T20:00:00+08:00",
+    "value": 4.660560340522565
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T21:00:00+08:00",
+    "value": 4.7501246759682685
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T22:00:00+08:00",
+    "value": 4.697005498061193
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-16T23:00:00+08:00",
+    "value": 4.642758092886661
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T00:00:00+08:00",
+    "value": 4.696825962133553
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T01:00:00+08:00",
+    "value": 4.743347055313073
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T02:00:00+08:00",
+    "value": 4.921457721300686
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T03:00:00+08:00",
+    "value": 4.913953723516196
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T04:00:00+08:00",
+    "value": 4.989655120067225
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T05:00:00+08:00",
+    "value": 4.931970257456445
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T06:00:00+08:00",
+    "value": 4.8845937924756
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T07:00:00+08:00",
+    "value": 4.777139543290273
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T08:00:00+08:00",
+    "value": 4.749664286507292
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T09:00:00+08:00",
+    "value": 4.727836381533054
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T10:00:00+08:00",
+    "value": 4.834446656136886
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T11:00:00+08:00",
+    "value": 4.823768169305
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T12:00:00+08:00",
+    "value": 4.808782696269936
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T13:00:00+08:00",
+    "value": 4.844844485320875
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T14:00:00+08:00",
+    "value": 4.80881902488475
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T15:00:00+08:00",
+    "value": 4.817535987176072
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T16:00:00+08:00",
+    "value": 4.778622279590886
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T17:00:00+08:00",
+    "value": 4.828889973628869
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T18:00:00+08:00",
+    "value": 4.798200497542702
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T19:00:00+08:00",
+    "value": 4.894388530179828
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T20:00:00+08:00",
+    "value": 4.917458573814241
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T21:00:00+08:00",
+    "value": 4.910633476256441
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T22:00:00+08:00",
+    "value": 4.845645457247838
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-17T23:00:00+08:00",
+    "value": 4.934260522014346
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T00:00:00+08:00",
+    "value": 4.871087943381766
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T01:00:00+08:00",
+    "value": 4.923048935424758
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T02:00:00+08:00",
+    "value": 4.799494242784499
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T03:00:00+08:00",
+    "value": 4.793415553466095
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T04:00:00+08:00",
+    "value": 4.821079142261113
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T05:00:00+08:00",
+    "value": 4.933484378598612
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T06:00:00+08:00",
+    "value": 4.8844543089715255
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T07:00:00+08:00",
+    "value": 4.872704983299252
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T08:00:00+08:00",
+    "value": 4.84986024222632
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T09:00:00+08:00",
+    "value": 4.9252960235235195
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T10:00:00+08:00",
+    "value": 4.911676216570764
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T11:00:00+08:00",
+    "value": 4.887724603424991
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T12:00:00+08:00",
+    "value": 4.796943654417336
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T13:00:00+08:00",
+    "value": 4.757541196697469
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T14:00:00+08:00",
+    "value": 4.641386230871192
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T15:00:00+08:00",
+    "value": 4.722543703048822
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T16:00:00+08:00",
+    "value": 4.684680645062436
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T17:00:00+08:00",
+    "value": 4.69470339183776
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T18:00:00+08:00",
+    "value": 4.662776817746663
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T19:00:00+08:00",
+    "value": 4.651784101446802
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T20:00:00+08:00",
+    "value": 4.691280472701442
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T21:00:00+08:00",
+    "value": 4.667777828400088
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T22:00:00+08:00",
+    "value": 4.725975601782846
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-18T23:00:00+08:00",
+    "value": 4.691911210676922
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-19T00:00:00+08:00",
+    "value": 4.807381215933359
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-19T01:00:00+08:00",
+    "value": 4.817218259448204
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-19T02:00:00+08:00",
+    "value": 4.89816718737707
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-19T03:00:00+08:00",
+    "value": 4.937571723271762
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-19T04:00:00+08:00",
+    "value": 5.046536090110714
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-19T05:00:00+08:00",
+    "value": 4.982562128744835
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-19T06:00:00+08:00",
+    "value": 5.023891679060103
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-19T07:00:00+08:00",
+    "value": 5.012599891098581
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-19T08:00:00+08:00",
+    "value": 5.005751107386729
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-19T09:00:00+08:00",
+    "value": 4.920510145425137
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-19T10:00:00+08:00",
+    "value": 4.939750519619392
+  },
+  {
+    "name": "pool_price",
+    "timestamp": "2025-01-19T11:00:00+08:00",
+    "value": 4.951555028418517
+  }
+]
