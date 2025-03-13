@@ -2,18 +2,16 @@
 
 import {
   useCurrentAccount,
-  useSignPersonalMessage,
   useCurrentWallet,
 } from "@mysten/dapp-kit";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "@/components/context/authContext";
 
 export default function SignAndLogin() {
-  const { mutate: signPersonalMessage } = useSignPersonalMessage();
+  // const { mutate: signPersonalMessage } = useSignPersonalMessage();
   const currentAccount = useCurrentAccount();
   const { connectionStatus } = useCurrentWallet();
-  const { user, login, logout } = useContext(AuthContext);
-  const message = "Majesticer API login";
+  const { login, logout } = useContext(AuthContext);
 
   useEffect(() => {
     const checkLogin = async () => {
