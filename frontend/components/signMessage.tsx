@@ -1,75 +1,60 @@
-"use client"
+"use client";
 
-import { useCurrentAccount, useSignPersonalMessage,useCurrentWallet } from '@mysten/dapp-kit';
-import { useContext, useEffect } from 'react';
-import { AuthContext } from '@/components/context/authContext';
+import {
+  useCurrentAccount,
+  useSignPersonalMessage,
+  useCurrentWallet,
+} from "@mysten/dapp-kit";
+import { useContext, useEffect } from "react";
+import { AuthContext } from "@/components/context/authContext";
 
 export default function SignAndLogin() {
-	const { mutate: signPersonalMessage } = useSignPersonalMessage();
-	const currentAccount = useCurrentAccount();
-	const { connectionStatus } = useCurrentWallet();
+  const { mutate: signPersonalMessage } = useSignPersonalMessage();
+  const currentAccount = useCurrentAccount();
+  const { connectionStatus } = useCurrentWallet();
+  const { user, login, logout } = useContext(AuthContext);
+  const message = "Majesticer API login";
 
-	const {user, login, logout } = useContext(AuthContext);
-	const message = 'Majesticer API login';
+  useEffect(() => {
+    const checkLogin = async () => {
+      if (connectionStatus == "connected" && currentAccount?.address) {
+        try {
+          const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api-keys`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              walletAddress: currentAccount.address,
+            }),
+          });
 
-	// async function loginCheck(signInfo:any):Promise<boolean> {
-	// 	try {
-	// 		const url = 'https://example.com/api/data';
-	// 		const data = {
-	// 		  username: currentAccount?.address,
-	// 		  password: signInfo,
-	// 		};
-		
-	// 		const config = {
-	// 		  headers: {
-	// 			'Content-Type': 'application/json',
-	// 			Authorization: 'Bearer your_token_here',
-	// 		  },
-	// 		};
-		
-	// 		const response = await axios.post(url, data, config);
-		
-	// 		console.log('Response:', response.data);
+          if (!response.ok) {
+            throw new Error("Failed to generate API key");
+          }
 
-	// 		return true
-	// 	  } catch (error) {
-	// 		console.error('Error:', error);
-	// 		return false
-	// 	  }
-	// }
+          const { apiKey, walletAddress } = await response.json();
 
-	useEffect(()=>{
+          login({
+            name: walletAddress,
+            apiKey: apiKey,
+          });
 
-		const checkLogin =async()=>{
-			if(connectionStatus == 'connected'){
-				login({ name: currentAccount?.address })
+          console.log("API Key generated successfully");
+        } catch (error) {
+          console.error("Error generating API key:", error);
+        }
+      } else if (connectionStatus == "disconnected") {
+        logout();
+      }
+    };
 
-				const signInfo = signPersonalMessage(
-					{
-						message: new TextEncoder().encode(message),
-					},
-					{
-						onSuccess: (result) => {return result},
-					},
-				);
+    checkLogin();
+  }, [connectionStatus, currentAccount]);
 
-				console.log(signInfo)
-				
-				console.log(user)
-			}else if(connectionStatus == 'disconnected'){
-				logout()
-			}
-		}
-
-		checkLogin()
-
-	},[connectionStatus])
-
-    
-
-	return (
-		<div style={{ padding: 10 }}>
-			{/* {currentAccount && (
+  return (
+    <div style={{ padding: 10 }}>
+      {/* {currentAccount && (
 				<>
 					<button className='bg-white text-blue font-bold py-1 px-2 rounded'
 						onClick={() => {
@@ -88,6 +73,6 @@ export default function SignAndLogin() {
 					<div className='text-white'>Signature: {signature.substring(0,15)}</div>
 				</>
 			)} */}
-		</div>
-	);
+    </div>
+  );
 }

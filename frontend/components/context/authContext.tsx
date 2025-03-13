@@ -1,10 +1,14 @@
 import React, { createContext, ReactNode, useState } from "react";
 
+type User = {
+  name: string;
+  apiKey?: string; // 新增 apiKey 欄位
+};
 
 interface AuthContextType {
-  user: any;
+  user: User | null;
   isLoggedIn: boolean;
-  login: (user: any) => void;
+  login: (user: User) => void;
   logout: () => void;
 }
 
@@ -30,9 +34,18 @@ export const WebsitePageContext = createContext<WebsitePageType>({
 // Provider 組件
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   // Auth 狀態
-  const [user, setUser] = useState<any>(null);
-  const login = (user: any) => setUser(user);
-  const logout = () => setUser(null);
+  const [user, setUser] = useState<User | null>(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const login = (userData: User) => {
+    setUser(userData);
+    setIsLoggedIn(true);
+  };
+
+  const logout = () => {
+    setUser(null);
+    setIsLoggedIn(false);
+  };
 
   // Page 狀態
   const [pageState, setPageState] = useState<string>("home");
@@ -42,7 +55,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     <AuthContext.Provider
       value={{
         user,
-        isLoggedIn: !!user,
+        isLoggedIn,
         login,
         logout,
       }}

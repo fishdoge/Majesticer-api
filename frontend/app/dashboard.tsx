@@ -7,12 +7,13 @@ import { Badge } from "@/components/ui/badge"
 import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
 import { ChartContainer, ChartTooltip } from "@/components/ui/chart"
 import { Copy, Key } from 'lucide-react'
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useToast } from "@/hooks/use-toast"
 import { useCurrentAccount} from '@mysten/dapp-kit';
 
 
 import Navbar from "@/components/navbar"
+import { AuthContext } from "@/components/context/authContext"
 
 const usageData = [
   { date: "2024-01", apiCalls: 2500 },
@@ -30,9 +31,9 @@ const usageData = [
 ]
 
 export default function DashboardPage() {
-  const [apiKey] = useState("majesticerkey_ZRqX5YElRKgZMWJXGgm8hal27p/ilMbiU+8HNv/Pm7U=")
-  const { toast } = useToast()
-  const [userAddress,setUserAddress] = useState('');
+  const { user } = useContext(AuthContext);
+  const { toast } = useToast();
+  const [userAddress, setUserAddress] = useState("");
   const [isCopied, setIsCopied] = useState(false);
 
 	const account = useCurrentAccount();
@@ -48,12 +49,19 @@ export default function DashboardPage() {
 
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(apiKey);
-    setIsCopied(true)
-    toast({
-      title: "API Key copied",
-      description: "Your API key has been copied to the clipboard.",
-    })
+    if (user?.apiKey) {
+      await navigator.clipboard.writeText(user.apiKey);
+      setIsCopied(true);
+      toast({
+        title: "API Key copied",
+        description: "Your API key has been copied to the clipboard.",
+      });
+    } else {
+      toast({
+        title: "No API Key",
+        description: "Please generate an API key first.",
+      });
+    }
   };
 
   return (
@@ -225,7 +233,7 @@ export default function DashboardPage() {
                   <div className="flex items-center space-x-2 rounded-md border border-gray-700 bg-gray-900/50 px-4 py-2">
                     <Key className="h-4 w-4 text-gray-400" />
                     <span className="text-sm text-gray-400 font-mono">
-                      {apiKey}
+                      {user?.apiKey}
                     </span>
                   </div>
                 </div>
